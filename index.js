@@ -16,7 +16,7 @@ app.get("/api/v1/instagram", (req, res) => {
         followers: 301,
         following: 324,
         posts: 20,
-        date: new Date()
+        date: moment(new Date()).utc().format("YYYY-MM-DD"),
     };
     res.status(200).json(instaSocial)
     
@@ -28,7 +28,7 @@ app.get("/api/v1/facebook", (req, res) => {
         followers: 2001,
         following: 2001,
         posts: 200,
-        date: new Date()
+        date: moment(new Date()).utc().format("YYYY-MM-DD"),
     };
     res.status(200).json(facebookSocial)
     
@@ -40,7 +40,7 @@ app.get("/api/v1/linkedin", (req, res) => {
         followers: 2500,
         following: 201,
         posts: 13,
-        date: new Date()
+        date: moment(new Date()).utc().format("YYYY-MM-DD"),
     };
     res.status(200).json(linkedinSocial)
     
